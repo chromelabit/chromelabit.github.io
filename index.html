@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChromeLAB</title>
+    <link rel="icon" type="image/jpeg" href="favicon.jpg"> <!-- Favicon -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
         body {
             background-color: #000;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', Arial, sans-serif; /* Changed font to Roboto */
             text-align: center;
             margin: 0;
-            padding: 0;
+            padding: 0; /* Adjusted padding */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -19,28 +22,54 @@
             min-height: 100vh;
         }
         header {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0; /* Adjusted padding */
+        }
+        header img {
+            max-height: 40px; /* Smaller logo */
+            width: auto;
+            margin-bottom: 20px;
         }
         h1 {
-            font-size: 2.5em;
-            margin: 0;
+            font-size: 1.944em; /* 10% smaller */
+            font-weight: normal; /* Unbolded */
+            margin: 10px 0; /* Reduced margin */
+        }
+        h2 {
+            font-size: 1.5em; /* Subheader font size */
+            margin: 20px 0; /* Reduced margin */
         }
         p {
             font-size: 1.2em;
             margin: 5px 0;
         }
         .services {
-            margin: 20px 0;
+            margin: 40px 0;
         }
         .services p {
-            margin: 10px 0;
+            margin: 5px 0; /* Reduced line spacing */
+            font-size: 1.08em; /* Decrease font size by 10% */
         }
         .contact-info {
-            margin: 20px 0;
+            margin: 40px 0;
+        }
+        .contact-info p {
+            font-size: 1.08em; /* Match the font size of "AV solutions" */
         }
         .contact-info a {
             color: #fff;
             text-decoration: none;
+        }
+        .contact-info a.email {
+            text-decoration: underline; /* Underline email address */
+            font-style: italic; /* Italicize email address */
+        }
+        .contact-info a.instagram {
+            text-decoration: underline; /* Underline Instagram handle */
+            font-style: italic; /* Italicize Instagram handle */
         }
         .icons {
             margin-top: 20px;
@@ -54,9 +83,12 @@
 
         @media (max-width: 768px) {
             h1 {
-                font-size: 2em;
+                font-size: 1.8em; /* Adjust for smaller screens */
             }
-            p, .services p {
+            h2 {
+                font-size: 1.3em; /* Adjust for smaller screens */
+            }
+            p, .services p, .contact-info p {
                 font-size: 1em;
             }
             .icons {
@@ -66,9 +98,12 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.5em;
+                font-size: 1.62em; /* Adjust for smaller screens */
             }
-            p, .services p {
+            h2 {
+                font-size: 1.2em; /* Adjust for smaller screens */
+            }
+            p, .services p, .contact-info p {
                 font-size: 0.9em;
             }
             .icons {
@@ -79,12 +114,12 @@
 </head>
 <body>
     <header>
-        <h1>ChromeLAB</h1>
-        <p>Digital + I.T network solutions made easy.</p>
+        <img src="chromelab-logo-transparent-white.png" alt="ChromeLAB Logo">
+        <h1>Digital + I.T network solutions made easy.</h1>
     </header>
     <main>
+        <h2>business, commercial + residential</h2>
         <div class="services">
-            <p><strong>business, commercial + residential</strong></p>
             <p>websites</p>
             <p>e-commerce stores</p>
             <p>domains</p>
@@ -98,12 +133,8 @@
             <p>AV solutions</p>
         </div>
         <div class="contact-info">
-            <p>All enquiries email <a href="mailto:hello@chromelab.io">hello@chromelab.io</a></p>
-            <p>Find us on Instagram <a href="https://instagram.com/chromelab.io" target="_blank">@chromelab.io</a></p>
-        </div>
-        <div class="icons">
-            <a href="https://instagram.com/chromelab.io" target="_blank">📷</a>
-            <a href="mailto:hello@chromelab.io">✉️</a>
+            <p>All enquiries email <a class="email" href="mailto:hello@chromelab.io">hello@chromelab.io</a></p>
+            <p>Find us on Instagram <a class="instagram" href="https://instagram.com/chromelab.io" target="_blank">@chromelab.io</a></p>
         </div>
     </main>
 </body>
